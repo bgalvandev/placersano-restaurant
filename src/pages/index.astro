@@ -1,11 +1,301 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Placer Sano - Crepería">
+  <div class="hero">
+    <div class="container">
+      <div class="row d-flex align-items-center">
+        <div class="col-lg-6 hero-left">
+          <h1 class="display-4 mb-5">
+            ¡Nos Encantan las <br />Crepas Saludables!
+          </h1>
+          <div class="mb-2">
+            <a
+              class="btn btn-primary btn-shadow btn-lg"
+              href="/menu"
+              role="button">Explorar Menú</a
+            >
+            <!-- <a
+              class="btn btn-icon btn-lg"
+              href="https://player.vimeo.com/video/33110953"
+              data-featherlight="iframe"
+              data-featherlight-iframe-allowfullscreen="true"
+            >
+              <span class="lnr lnr-film-play"></span>
+              Play Video
+            </a>
+            -->
+          </div>
+          <ul class="hero-info list-unstyled d-flex text-center mb-0">
+            <li class="border-right">
+              <span class="lnr lnr-rocket"></span>
+              <h5>Entrega rápida</h5>
+            </li>
+            <li class="border-right">
+              <span class="lnr lnr-leaf"></span>
+              <h5>Saludables</h5>
+            </li>
+            <li class="">
+              <span class="lnr lnr-bubble"></span>
+              <h5>24/7 Atención</h5>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-6 hero-right">
+          <div class="owl-carousel owl-theme hero-carousel">
+            <div class="item">
+              <img class="img-fluid" src="/img/crepe-dulce-alto.jpg" alt="" />
+            </div>
+            <div class="item">
+              <img class="img-fluid" src="/img/nutella-crepes.jpg" alt="" />
+            </div>
+            <div class="item">
+              <img class="img-fluid" src="/img/crepe-salado-alto.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Testimonial Section-->
+  <section
+    id="gtco-testimonial"
+    class="overlay bg-fixed section-padding"
+    style="background-image: url(/img/CREPES.jpg)"
+  >
+    <div class="container">
+      <div class="section-content">
+        <div class="heading-section text-center">
+          <h2>Clientes Satisfechos</h2>
+        </div>
+        <div class="row">
+          <!-- Testimonial -->
+          <div class="testi-content testi-carousel owl-carousel">
+            <div class="testi-item">
+              <i class="testi-icon fa fa-3x fa-quote-left"></i>
+              <p class="testi-text">
+                La mejor crepería saludable de Miraflores.
+              </p>
+              <p class="testi-author">John Doe</p>
+            </div>
+            <div class="testi-item">
+              <i class="testi-icon fa fa-3x fa-quote-left"></i>
+              <p class="testi-text">
+                ¡Un lugar perfecto para comer sano y delicioso!
+              </p>
+              <p class="testi-author">Mary Jane</p>
+            </div>
+          </div>
+          <!-- End of Testimonial -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of Testimonial Section-->
+  <section id="gtco-menu" class="section-padding">
+    <div class="container">
+      <div class="section-content">
+        <div class="row mb-5">
+          <div class="col-md-12">
+            <div class="heading-section text-center">
+              <span class="subheading">Menú</span>
+              <h2>Nuestro Menú</h2>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="text-center mb-5">Desayunos</h3>
+
+        <div class="row">
+          <div class="col-lg-4 menu-wrap">
+            <div class="heading-menu"></div>
+            <div class="menus d-flex align-items-center">
+              <div class="menu-img rounded-circle">
+                <img class="img-fluid" src="img/crepe-avena.png" alt="" />
+              </div>
+              <div class="text-wrap">
+                <div class="row align-items-start">
+                  <div class="col-8">
+                    <h4>Crepa de Avena y Frutas</h4>
+                  </div>
+                  <div class="col-4">
+                    <h4 class="text-muted menu-price">S/ 8.00</h4>
+                  </div>
+                </div>
+                <p>Incluye un smoothie de mango.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 menu-wrap">
+            <div class="heading-menu"></div>
+            <div class="menus d-flex align-items-center">
+              <div class="menu-img rounded-circle">
+                <img class="img-fluid" src="img/smoothie-frutas.jpg" alt="" />
+              </div>
+              <div class="text-wrap">
+                <div class="row align-items-start">
+                  <div class="col-8">
+                    <h4>Smoothie de Frutas</h4>
+                  </div>
+                  <div class="col-4">
+                    <h4 class="text-muted menu-price">S/ 10.00</h4>
+                  </div>
+                </div>
+                <p>Decorado con granola y semillas.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 menu-wrap">
+            <div class="heading-menu"></div>
+            <div class="menus d-flex align-items-center">
+              <div class="menu-img rounded-circle">
+                <img
+                  class="img-fluid"
+                  src="img/tostada-palta-huevo.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="text-wrap">
+                <div class="row align-items-start">
+                  <div class="col-8">
+                    <h4>Tostadas con Palta y Huevo</h4>
+                  </div>
+                  <div class="col-4">
+                    <h4 class="text-muted menu-price">S/ 9.00</h4>
+                  </div>
+                </div>
+                <p>Incluye pan integral y sal</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Reservation Section -->
+  <section
+    id="gtco-reservation"
+    class="bg-fixed bg-white section-padding overlay"
+    style="background-image: url(img/reservation-bg.jpg);"
+  >
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5">
+          <div class="section-content bg-white p-5 shadow">
+            <div class="heading-section text-center">
+              <span class="subheading"> Reservaciones </span>
+              <h2>Reserva Ahora</h2>
+            </div>
+            <form method="post" name="contact-us" action="">
+              <div class="row">
+                <div class="col-md-12 form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    name="name"
+                    placeholder="Nombre"
+                  />
+                </div>
+                <div class="col-md-12 form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    placeholder="Correo"
+                  />
+                </div>
+                <div class="col-md-12 form-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="phoneNumber"
+                    name="phoneNumber"
+                    placeholder="Teléfono"
+                  />
+                </div>
+                <div class="col-md-6 form-group">
+                  <div
+                    class="input-group date"
+                    id="datetimepicker4"
+                    data-target-input="nearest"
+                  >
+                    <input
+                      type="text"
+                      class="form-control datetimepicker-input"
+                      data-target="#datetimepicker4"
+                      placeholder="Fecha"
+                    />
+                    <div
+                      class="input-group-append"
+                      data-target="#datetimepicker4"
+                      data-toggle="datetimepicker"
+                    >
+                      <div class="input-group-text">
+                        <span class="lnr lnr-calendar-full"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <div
+                    class="input-group date"
+                    id="datetimepicker3"
+                    data-target-input="nearest"
+                  >
+                    <input
+                      type="text"
+                      class="form-control datetimepicker-input"
+                      data-target="#datetimepicker3"
+                      placeholder="Hora"
+                    />
+                    <div
+                      class="input-group-append"
+                      data-target="#datetimepicker3"
+                      data-toggle="datetimepicker"
+                    >
+                      <div class="input-group-text">
+                        <span class="lnr lnr-clock"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-12 form-group">
+                  <select class="form-control" id="selectPerson">
+                    <option></option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+
+                <div class="col-md-12 form-group">
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    name="message"
+                    rows="6"
+                    placeholder="Mensaje ..."></textarea>
+                </div>
+                <div class="col-md-12 text-center">
+                  <button
+                    class="btn btn-primary btn-shadow btn-lg"
+                    type="submit"
+                    name="submit">Enviar</button
+                  >
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>
